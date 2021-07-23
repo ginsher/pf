@@ -1,0 +1,159 @@
+/* fonts */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+html { overflow-y: scroll; box-sizing: border-box;}
+*, *:before, *:after{box-sizing:inherit;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none;}
+img { border:0;}
+
+body {word-break:break-all;-ms-word-break:break-all; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0; padding:0;}
+fieldset,img {border:0px none; vertical-align:top;}
+dl,ul,ol,menu,li {list-style:none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+button {border:0 none; background-color:transparent; cursor:pointer;}
+body { background:#fff;}
+body,th,td,input,select,textarea,button {font-size:13px; line-height:1.6; font-family: 'Nanum Gothic';  color:#7d7d7d;} 
+input, select, textarea, button{vertical-align:middle; }
+a:link,a:active,a:visited{color:#7d7d7d; text-decoration:none; border:0px;}
+a:hover,a:focus{color:#333; text-decoration:none}
+
+table {border-collapse:collapse; border-spacing:0;}
+address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:normal;}
+summary, caption, legend, hr {width:0; height:0; font-size: ; line-height: ; overflow: hidden; visibility: hidden; border: none; position:absolute; left:-1000em;}
+caption {position:static;}
+
+/* common */
+.clfix:before, .clfix:after {content: "."; display: block; height:0px; clear: both; visibility: hidden;}
+/* .clearfix:before, .clearfix:after {display: block; content: ''; clear: both;} */
+.clfix {display:inline-block;}
+.clfix {display:block;}
+* html .clfix {height:1%;} /* Hides from IE-mac */
+.clfix {zoom:1;} /*for IE 5.5-7*/
+
+
+
+/* layout */
+#wrap {position:relative; min-width:1200px; overflow:hidden;}
+.inner {position:relative; width:1200px; margin: 0 auto;}
+#header {position:relative; height:120px; border-top:2px solid #689642;}
+#header:before {content:''; position:absolute; left:0; top:0; width:100%; height:36px; border-bottom:1px solid #d9d9d9;}
+#footer {position:relative; background:#f7f7f7;}
+#footer:after {content:''; position:absolute; left:0; top:0; width:100%; height:49px; background:url(http://www.ltfcc.co.kr/images/main/footer_bg.jpg) no-repeat center top;}
+
+/* header */
+#header > .inner h1 {position:absolute; top:47px;}
+
+.top_menu {position:absolute; top:8px; right:0; font-size:0; font-weight:600;}
+.top_menu span {display:inline-block; font-size:12px; color:;}
+.top_menu span + span:before {content:"|"; margin:0 20px; font-weight:100;}
+
+.gnb {position:absolute; right:0; top:36px; text-align:center;}
+.gnb > li {position:relative; float:left; width:176px; height:82px; line-height:82px; }
+.gnb > li > a {display:block; font-size:17px; color:#2e2e2e; font-weight:800; transition:all 0.2s ease-in-out;}
+.gnb > li:hover {background:rgba(110,164,59,0.9);}
+.gnb > li:hover > a {color:#fff;}
+.gnb_2depth {display:none; position:absolute; top:82px; left:0; width:176px; z-index:99; padding:21px 0; background:rgba(110,164,59,0.9); text-align:left;}
+.gnb_2depth li {float:left; width:100%; height:32px; line-height:32px; padding-left:25px;}
+.gnb_2depth li a {font-size:15px; color:#fff; font-weight:600;}
+
+/* visual */
+#visual_wrap {position:relative; width:100%;}
+#visual_wrap > p {height:860px; background:url(http://www.ltfcc.co.kr/rolling_banner/item/30ad29db7f.jpg) center top no-repeat;}
+
+.quick {position:absolute; width:900px; text-align:center; left:50%; transform:translateX(-50%); bottom:108px;}
+.quick li {display:table; table-layout:fixed; float:left;}
+.quick li + li {margin-left:100px;}
+.quick li a {display:table-cell; vertical-align:middle; text-align:center; width:150px; height:150px; background:rgba(0,0,0,0.6); border-radius:50%; transition:all 0.3s ease-in-out;}
+.quick li a:hover {background:rgba(110,164,59,0.8); transform:translatey(-2px);}
+.quick li p  {font-size:17px; color:#fff; font-weight:600; margin-top:12px;}
+
+/* container */
+.section01 {padding-top:80px; padding-bottom:144px;}
+.sec1 {}
+.sec1 li {position:relative; float:left;}
+.sec1 li + li{margin-left:30px;}
+.sec1 li:hover div {background:#6ea43b;}
+.sec1 li:hover div span {color:#fff;}
+.sec1 li:hover div h2 {color:#fff;}
+.sec1 li div {position:absolute; left:50%; transform:translateX(-50%);  bottom:-60px; width:300px; height:100px; background:#fff; padding:20px; transition:0.5s all; box-shadow:3px 3px 15px rgba(0,0,0,0.1);}
+.sec1 li div:after {content:""; position:absolute; right:30px; bottom:40px; width:58px; height:13px; background:url(http://www.ltfcc.co.kr/images/main/sec1_arrow.png) no-repeat;  transition:0.5s all;}
+.sec1 li div:hover:after{right:20px;}
+
+.section02 {height:662px; background:url(http://www.ltfcc.co.kr/images/main/section2_bg.jpg) no-repeat center top; padding:74px 0;}
+.sec2_tit {text-align:center;}
+.sec2_tit h2 {font-size:40px; padding-bottom:50px; color:#2e2e2e;}
+.sec2 {}
+.sec2 li {float:left; width:232px; height:400px; transition:0.3s all ease-in-out;}
+.sec2 li + li {margin-left:10px;}
+.sec2 li:nth-child(1) {background:url(http://www.ltfcc.co.kr/images/main/sec2_img01.jpg);}
+.sec2 li:nth-child(2) {background:url(http://www.ltfcc.co.kr/images/main/sec2_img02.jpg);}
+.sec2 li:nth-child(3) {background:url(http://www.ltfcc.co.kr/images/main/sec2_img03.jpg);}
+.sec2 li:nth-child(4) {background:url(http://www.ltfcc.co.kr/images/main/sec2_img04.jpg);}
+.sec2 li:nth-child(5) {background:url(http://www.ltfcc.co.kr/images/main/sec2_img05.jpg);}
+.sec2 li:before {position:absolute; content:''; width:232px; height:400px; opacity:0.5; background:black;}
+.sec2 li:hover {transform:translateY(-20px); box-shadow:5px 10px 25px rgba(0,0,0,0.5);}
+.sec2 li:hover:before{position:absolute; content:''; width:232px; height:400px; background:rgba(255,255,255,0); border:2px solid #6ea43b;}
+.sec2 li a {position:relative; height:100%; display:block; padding:20px 24px; z-index:999;}
+.sec2 li h3 {font-size:24px; color:#fff;}
+.sec2 li em {color:#fff;}
+.sec2 .more {position:absolute; bottom:49px; right:0; width:153px; height:35px; background:rgba(0,0,0,0.8);}
+.sec2 .more span {display:block; width:100%; height:35px; font-size:13px; line-height:35px; padding-left:20px; color:#fff;}
+.sec2 .more span:after {content:''; position:absolute; right:20px; bottom:14px; width:31px; height:9px; background:url(http://www.ltfcc.co.kr/images/main/sec2_arrow.png) no-repeat;}
+.sec2 li:hover .more span {background:rgba(110,164,59,0.8);}
+
+.section03 {height:530px; padding:60px 0; background:url(http://www.ltfcc.co.kr/images/main/section3_bg.jpg) no-repeat center top;}
+.sec3_tit {text-align:center;}
+.sec3_tit h2 {font-size:40px; color:#fff; padding-bottom:50px;}
+.sec3 {}
+.sec3 li {display:table; table-layout:fixed; float:left; transition:all 0.3s ease-in-out;}
+.sec3 li span {display:table-cell; vertical-align:middle; text-align:center; width:300px; height:160px;}
+.sec3 li h3 {font-size:24px; color:#fff; font-weight:500; margin-top:25px; text-align:center;}
+.sec3 li .more {position:relative; width:153px; height:35px; line-height:32px; border:1px solid #fff; padding-left:20px; color:#fff; margin:0 auto; margin-top:25px;}
+.sec3 li .more:after {position:absolute; content:''; width:31px; height:9px; right:20px; bottom:14px; background:url(http://www.ltfcc.co.kr/images/main/sec2_arrow.png) no-repeat;}
+
+.sec3 li:hover span img {transform:rotatey(360deg); transition:all 0.7s ease-in-out;}
+.sec3 li:hover .more {border:1px solid #6ea43b; background:#6ea43b;}
+
+.section04 {position:relative; height:530px; background:url(http://www.ltfcc.co.kr/images/main/section4_bg.jpg) no-repeat center top;}
+.sec4_tit {text-align:center;}
+.sec4_tit h2 {font-size:40px; color:#fff; font-weight:600; line-height:38px; padding-top:138px; padding-bottom:50px;}
+.play_btn {position:absolute; left:50%; top:50%; transform:translate(-50%,-30%); text-align:center;}
+.play_btn span {display:block; font-size:17px; color:#fff; font-weight:500; margin-top:13px; letter-spacing:1px;}
+
+.section05 {height:733px; background:url(http://www.ltfcc.co.kr/images/main/section5_bg.jpg) no-repeat center top; padding:80px 0;}
+.sec5_tit {text-align:center;}
+.sec5_tit h2 {font-size:40px; color:#2e2e2e; padding-bottom:40px;}
+.sec5 {}
+.sec5 li {display:table; table-layout:fixed; float:left; transition:all 0.3s ease-in-out;}
+.sec5 li:hover {transform:translateY(-20px); box-shadow:5px 10px 25px rgba(0,0,0,0.3);}
+.sec5 li + li {margin-left: 40px;}
+.sec5 li span {display:block; vertical-align:middle; text-align:center;}
+/*.sec5 li span:before {transition:all 0.3s ease-in-out;} ?????????????????????????*/
+.sec5 li span img {max-width:270px; max-height:382px; width:auto; height:auto;}
+.sec5 li dl {height:82px; padding:10px 20px; background:#fff;}
+.sec5 li dl dt {position:absolute; font-size:13px; color:#8f8f8f;}
+.sec5 li dl dd {position:absolute; margin-top:24px; font-size:16px; color:#2e2e2e; font-weight:600; text-overflow: ellipsis;}
+.sec5 li:hover span:before {position:absolute; content:''; width:270px; height:382px; background:url(http://www.ltfcc.co.kr/images/main/hover.png), rgba(0,0,0,0.6);}
+
+/* footer */
+#footer .inner{padding:30px 0;}
+#footer .inner > a >img {padding-top:50px;}
+.footer_top {}
+.footer_left {position:absolute; left:0; top:0px; z-index:999;}
+.footer_left li {display:inline-block; float:left;}
+.footer_left li + li {margin-left:36px;}
+.footer_left li a {font-size:13px; line-height:49px; color:#fff; font-weight:600; transition:all 0.2s ease-in-out;}
+.footer_top ul li:hover a {color:#6ea43b;}
+.footer_right {position:absolute; right:0; top:0; z-index:999;}
+.footer_right span {float:left; vertical-align:middle;}
+.footer_right span + span {margin-left:65px;}
+.footer_right span a {font-size:17px; color:#fff; font-weight:600; line-height:49px;}
+.footer_right span img {vertical-align:-4px; margin-right:9px;}
+#footer address {position:absolute; left:0;  top:80px; margin-left: 295px; font-size:13px;}
+#footer address span {display:inline-block; margin-right:28px;}
+.copyright {position:absolute; left:0;  top:110px; margin-left: 295px;}
